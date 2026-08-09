@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Syntax Cine - Plataforma de streaming empresarial">
+  <meta name="theme-color" content="#060b18">
+  <title>Syntax Cine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+</head>
+<body>
+  <div class="block-overlay" id="block-overlay">
+    <div class="icon">⛔</div>
+    <div class="msg">Acceso denegado</div>
+    <div class="sub">Las herramientas de desarrollo están deshabilitadas</div>
+  </div>
+
+  <header id="app-header"></header>
+  <div id="app-navigation"></div>
+
+  <main>
+    <div id="movies-container"></div>
+    <div id="no-results">No se encontraron resultados</div>
+    <div id="load-more-container">
+      <button id="load-more-btn">Cargar más películas</button>
+    </div>
+  </main>
+
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modal-close">✕</button>
+      <img class="modal-backdrop" id="modal-backdrop" src="" alt="">
+      <div class="modal-content">
+        <h2 id="modal-title"></h2>
+        <div class="modal-meta">
+          <span id="modal-year"></span>
+          <span id="modal-rating"></span>
+          <span id="modal-runtime"></span>
+        </div>
+        <div class="genre-tags" id="modal-genres"></div>
+        <p class="modal-description" id="modal-desc"></p>
+        <div class="servers-section">
+          <h3>▶ Selecciona servidor</h3>
+          <div class="server-tabs" id="server-tabs"></div>
+          <div class="player-container" id="player-container">
+            <p class="player-placeholder">Selecciona un servidor para reproducir</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="app-footer"></div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
